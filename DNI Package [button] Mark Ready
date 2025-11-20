@@ -1,3 +1,5 @@
+# Server Action
+
 record.write({
     'x_studio_status': 'ready',
 })
