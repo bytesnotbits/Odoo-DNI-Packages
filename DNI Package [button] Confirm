@@ -1,3 +1,5 @@
+# Server Action
+
 record.write({
     'x_studio_status': 'picked_up',
     'x_studio_delivered_by': env.user.id,
