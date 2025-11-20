@@ -1,0 +1,8 @@
+record.write({
+    'x_studio_status': 'ready',
+})
+record.message_post(
+    body=f"Status changed to <b>Ready for Pickup/Dropoff</b> by {env.user.name}.",
+    message_type="comment",
+    subtype_xmlid="mail.mt_note",
+)
