@@ -1,8 +1,8 @@
-# 📦 **Odoo Custom App – Package Log Workflow (How-To Guide)**
+#  **Odoo Custom App – Package Log Workflow (How-To Guide)**
 
-### _Created using Odoo Studio – Version 16/18 Compatible_
+### _Created using Odoo Studio – Version 18 Compatible_
 
-## 🚀 **Purpose**
+##  **Purpose**
 
 Create a lightweight internal system to log incoming packages (not tied to inventory), track their status, capture signature/photo evidence, and confirm pickup—all without affecting stock levels.
 
@@ -45,6 +45,12 @@ In **Studio → Form View**:
     -   Name (top field)
         
     -   Notes (chatter)
+ 
+    -   Contact (rename to 'Recipient')
+ 
+    -   Responsible
+ 
+    -   Tags
         
 
 You're left with a clean canvas.
@@ -55,16 +61,6 @@ You're left with a clean canvas.
 
 Add the following fields:
 
-### **Recipient**
-
--   Type: Many2one → `res.partner`
-    
--   Technical name: `x_studio_partner_id`
-    
--   Required: Yes
-    
--   This links packages to employees/contractors.
-    
 
 ### **Tracking Number**
 
@@ -122,7 +118,7 @@ Add:
 -   Readonly: Yes
     
 
-(You reuse Odoo’s existing **Created on**, **Last Updated on**, and **Created by** fields.)
+(Reuse Odoo’s existing **Created on**, **Last Updated on**, and **Created by** fields.)
 
 ----------
 
@@ -148,7 +144,7 @@ Add:
 
 1.  In Studio, click **Add a button**.
     
-2.  Label: **Mark Ready for Pickup/Dropoff**
+2.  Label: **Mark Ready**
     
 3.  Type: Action → Create Server Action
     
@@ -279,7 +275,7 @@ Add inside Confirm Pickup action:
 
 # 🎉 **End Result**
 
-You now have a fully functional Package Logging app with:
+A fully functional Package Logging app with:
 
 -   Clean UI
     
